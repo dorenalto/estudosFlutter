@@ -1,3 +1,5 @@
+import 'package:ecommerce/page/home.page.dart';
+import 'package:ecommerce/page/signup.page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -16,7 +18,7 @@ class LoginPage extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: 450,
+                height: 480,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -44,8 +46,9 @@ class LoginPage extends StatelessWidget {
                               Text(
                                 'Welcome',
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 40,
                                   fontWeight: FontWeight.w500,
+                                  color: Colors.grey[600],
                                 ),
                               ),
                               Text(
@@ -54,10 +57,26 @@ class LoginPage extends StatelessWidget {
                             ],
                           ),
                           FlatButton(
-                            child: Text('Sign Up'),
-                            onPressed: () {},
+                            child: Text(
+                              'Sign Up',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.green[400],
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SignupPage(),
+                                ),
+                              );
+                            },
                           ),
                         ],
+                      ),
+                      SizedBox(
+                        height: 65,
                       ),
                       TextFormField(
                         autofocus: true,
@@ -65,7 +84,7 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: 'E-mail',
                           labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Colors.green[400],
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -75,7 +94,7 @@ class LoginPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 60,
+                        height: 10,
                       ),
                       TextFormField(
                         autofocus: true,
@@ -84,7 +103,7 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: 'Password',
                           labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
+                            color: Colors.green[400],
                             fontWeight: FontWeight.w400,
                             fontSize: 16,
                           ),
@@ -99,6 +118,10 @@ class LoginPage extends StatelessWidget {
                         child: FlatButton(
                           child: Text(
                             'Forgot your password?',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: Colors.green[400],
+                            ),
                           ),
                           onPressed: () {},
                         ),
@@ -117,7 +140,14 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                         child: FlatButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => HomePage(),
+                              ),
+                            );
+                          },
                           child: Text(
                             'Sign In',
                             style: TextStyle(
