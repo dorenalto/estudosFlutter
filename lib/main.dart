@@ -1,4 +1,4 @@
-import 'package:ecommerce/page/login.page.dart';
+import 'package:ecommerce/page/tabs.page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LoginPage(),
+      home: DefaultTabController(
+        length: 3,
+        child: TabPage(),
+      ),
     );
   }
 }
