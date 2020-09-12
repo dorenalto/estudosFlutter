@@ -9,7 +9,7 @@ class CartPage extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              child: productList(),
+              child: productList(context),
             ),
           ),
           Container(
@@ -32,7 +32,7 @@ class CartPage extends StatelessWidget {
                       Text(
                         '\$4250',
                         style: TextStyle(
-                          color: Colors.green,
+                          color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                         ),
@@ -65,23 +65,24 @@ class CartPage extends StatelessWidget {
   }
 }
 
-Widget productList() {
+Widget productList(BuildContext context) {
   return Container(
     child: ListView(
       scrollDirection: Axis.vertical,
       children: [
-        productItem(),
-        productItem(),
-        productItem(),
-        productItem(),
-        productItem(),
-        productItem(),
+        productItem(context),
+        productItem(context),
+        productItem(context),
+        productItem(context),
+        productItem(context),
+        productItem(context),
+        productItem(context),
       ],
     ),
   );
 }
 
-Widget productItem() {
+Widget productItem(BuildContext context) {
   return Container(
     margin: EdgeInsets.all(5),
     height: 120,
@@ -104,7 +105,7 @@ Widget productItem() {
               Text(
                 '\$200',
                 style: TextStyle(
-                  color: Colors.green,
+                  color: Theme.of(context).primaryColor,
                 ),
               ),
               SizedBox(

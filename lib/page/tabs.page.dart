@@ -17,7 +17,7 @@ class TabPage extends StatelessWidget {
       bottomNavigationBar: Container(
         padding: EdgeInsets.only(bottom: 20),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).accentColor,
           boxShadow: [
             BoxShadow(
               color: Colors.black12,
@@ -39,11 +39,11 @@ class TabPage extends StatelessWidget {
               icon: Icon(Icons.perm_identity),
             )
           ],
-          labelColor: Colors.green,
+          labelColor: Theme.of(context).primaryColor,
           unselectedLabelColor: Colors.black38,
           indicatorSize: TabBarIndicatorSize.label,
           indicatorPadding: EdgeInsets.all(5),
-          indicatorColor: Colors.green,
+          indicatorColor: Theme.of(context).primaryColor,
         ),
       ),
     );

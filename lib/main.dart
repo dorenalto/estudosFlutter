@@ -1,4 +1,5 @@
 import 'package:ecommerce/page/tabs.page.dart';
+import 'package:ecommerce/theme/light.theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'E-Commerce',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: lightTheme(),
       home: DefaultTabController(
         length: 3,
         child: TabPage(),

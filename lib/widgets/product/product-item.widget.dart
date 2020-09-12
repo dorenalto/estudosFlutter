@@ -78,7 +78,7 @@ class ProductItem extends StatelessWidget {
             style: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.bold,
-              color: Color(0XFF00C569),
+              color: Theme.of(context).primaryColor,
             ),
           ),
         ],
